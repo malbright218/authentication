@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background-image: url("../assets/chameleon.jpg");
+background-image: url("./chameleon.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'DIN', sans-serif;
 }
+
 
 .container{
 height: 100%;

@@ -3,9 +3,13 @@ const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const session = require("express-session");
-const passport = require('passport')
+const passport = require('passport');
+const path = require('path');
 
 const app = express();
+
+// STATIC FILES
+app.use(express.static("public"));
 
 // PASSPORT CONFIG
 require('./config/passport')(passport)
@@ -54,6 +58,6 @@ app.use(function(req, res, next) {
 app.use("/", require("./routes/index"));
 app.use("/users", require("./routes/users"));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
